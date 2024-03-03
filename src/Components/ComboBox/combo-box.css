@@ -1,0 +1,90 @@
+.combo-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    color: white;
+    font-size: 14px;
+
+    height: 28px;
+    border-radius: 4px;
+    background: rgb(255, 255, 255, 0.2);
+    border: 1px solid rgb(255, 255, 255, 0.15);
+}
+
+.combo-box:focus{
+    outline: none;
+    border: 1px solid white;
+}
+
+.combo-box .button-text {
+    margin-left: 8px;
+}
+
+.combo-box .combo-chevron {
+    transition: 150ms ease-out;
+    margin-right: 8px;
+    color: #00c3b9;
+}
+
+.combo-box.active .combo-chevron {
+    transform: rotateZ(180deg);
+}
+
+.combo-box .dropdown-positioner {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -4px;
+    height: 0;
+    z-index: 10;
+}
+
+.combo-dropdown {
+    list-style-type: none;
+    opacity: 0;
+
+    background: rgb(0, 0, 0, 0.9);
+    color: white;
+    border-radius: 4px;
+    backdrop-filter: blur(20px);
+    padding: 1px 0;
+
+    overflow: none;
+
+    pointer-events: none;
+    transform: scaleY(0.7);
+    transform-origin: top;
+    transition: opacity 150ms ease-out, transform 200ms ease-out;
+
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.3);
+}
+
+
+.combo-dropdown.active {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: all;
+}
+
+.combo-dropdown li {
+    padding-left: 6px;
+    margin: 1px;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    height: 28px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.combo-dropdown li:hover {
+    background: #006f6a;
+    color: white;
+    border-radius: 4px;
+}

@@ -1,0 +1,103 @@
+.range-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.range-bar .range-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.range-bar .range-wrapper input {
+    appearance: none;
+    -webkit-appearance: none;
+    flex: 1;
+    background: transparent;
+    overflow: hidden;
+}
+
+.range-bar .range-wrapper input::-webkit-slider-thumb {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 18px;
+    width: 18px;
+    background: #003c2b;
+    border-radius: 9px;
+    border: 1px solid white;
+    box-shadow: calc(-120vw - 10px) 0 0 120vw var(--range-color);
+    cursor: pointer;
+}
+
+.range-bar .range-wrapper input::-moz-range-thumb {
+    height: 18px;
+    width: 18px;
+    background: #003c2b;
+    border-radius: 9px;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.range-bar .range-wrapper input::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgb(255, 255, 255, 0.2);
+    border: 1px solid rgb(255, 255, 255, 0.1);
+    overflow: hidden;
+}
+
+.range-bar .range-wrapper input::-moz-range-track {
+    width: 100%;
+    height: 20px;
+    cursor: pointer;
+    background: #00b582;
+    border-radius: 10px;
+    border: 1px solid rgb(255, 255, 255, 0.1);
+}
+
+.range-bar .range-wrapper input::-moz-range-progress { 
+    background-color: #ffffff; 
+}
+
+.range-bar .range-wrapper input:focus {
+    outline: none;
+}
+
+.range-bar .range-wrapper .range-value {
+    width: 64px;
+    font-size: 12px;
+    text-align: right;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.range-bar .range-wrapper .range-value .value {
+    font-weight: bold;
+}
+
+.range-bar .range-wrapper .range-value .label-suffix {
+    font-size: 10px;
+    padding: 0 2px;
+    text-align: center;
+}
+
+.range-bar .threshold-text {
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+
+    background: rgb(255, 0, 0, 0.1);
+    
+    text-align: center;
+    font-size: 12px;
+    color: rgb(255, 95, 95);
+}

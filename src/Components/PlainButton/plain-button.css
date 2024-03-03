@@ -1,0 +1,20 @@
+button.plain-button {
+    background: transparent;
+    color: #00c3b9;
+    border: 1px solid rgba(255, 255, 255, 0);
+    transition: 300ms background ease-out, 120ms transform ease-out;
+}
+
+button.plain-button:hover {
+    background: #00c3b947;
+}
+
+button.plain-button:active {
+    transform: scale(0.93);
+}
+
+button.plain-button:disabled {
+    pointer-events: none;
+    color: white;
+    opacity: 0.5;
+}

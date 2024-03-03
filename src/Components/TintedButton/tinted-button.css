@@ -1,0 +1,22 @@
+button.tinted-button {
+    background: #002121;
+    color: #00c4c4;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    transition: 200ms ease-out;
+    cursor: pointer;
+}
+
+button.tinted-button:hover {
+    filter: brightness(1.4);
+}
+
+button.tinted-button:active {
+    filter: brightness(0.9);
+    transform: scale(0.9);
+}
+
+button.tinted-button:disabled {
+    opacity: 0.8;
+    filter: saturate(0);
+    pointer-events: none;
+}

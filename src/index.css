@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, system-ui, Arial, Helvetica, sans-serif;
+}
+
+*:disabled {
+    pointer-events: none;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    color: white;
+}
+
+body {
+    background: radial-gradient(50% 50% at 50% 50%, rgb(0, 48, 48, 0.8) 0%, rgba(0, 0, 0, 0.00) 100%), #000;
+}
+
+#root {
+    height: 100%;
+    width: 100%;
+}

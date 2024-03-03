@@ -1,0 +1,133 @@
+.image-chooser {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(14px);
+
+    margin-top: 60px;
+    padding: 20px;
+
+    height: 160px;
+    width: 100%;
+    max-width: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    transition: transform 300ms ease-out, background 300ms ease-out, border 300ms ease-out;
+}
+
+.image-chooser.dragging {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2)
+}
+
+.image-chooser .drop-label {
+    color: #909090;
+    font-size: 20px;
+    font-weight: 400;
+    transition: transform 300ms ease-out, color 300ms ease-out;
+}
+
+.image-chooser.dragging .drop-label {
+    transform: scale(2);
+    font-weight: 800;
+    color: rgb(255, 255, 255, 0.25);
+}
+
+.image-chooser .or-text {
+    color: #ADADAD;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 4px 0 20px 0;
+}
+
+.image-chooser .browsing-options {
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.05);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    padding: 4px;
+}
+
+.image-chooser .browsing-options button.choose-file {
+    height: 36px;
+    font-size: 17px;
+    padding: 0 10px;
+    border-radius: 4px;
+    
+    margin-right: 10px;
+}
+
+.image-chooser .browsing-options .selected-file-name {
+    width: 220px;
+    font-size: 17px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media screen and (max-width: 945px) {
+    .image-chooser {
+        width: 500px;
+    }
+
+    .image-chooser .drop-label {
+        font-size: 17px;
+    }
+
+    .image-chooser .or-text {
+        font-size: 14px;
+    }
+
+    .image-chooser .browsing-options button.choose-file {
+        font-size: 15px;
+        height: 32px;
+    }
+    
+    .image-chooser .browsing-options .selected-file-name  {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .image-chooser {
+        width: unset;
+        height: unset;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .image-chooser {
+        padding: 10px;
+    }
+
+    .image-chooser .browsing-options .selected-file-name {
+        width: 150px;
+    }
+
+    .image-chooser .drop-label {
+        font-size: 16px;
+    }
+
+    .image-chooser .or-text {
+        font-size: 13px;
+    }
+
+    .image-chooser .browsing-options button.choose-file {
+        font-size: 14px;
+        height: 28px;
+    }
+    
+    .image-chooser .browsing-options .selected-file-name  {
+        font-size: 14px;
+    }
+}

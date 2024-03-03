@@ -1,0 +1,150 @@
+.preferences {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    box-shadow: 0px 10px 16px 0px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(50px);
+
+    align-self: center;
+    position: sticky;
+    top: 0;
+}
+
+.preferences .content {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+.preferences .title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.preferences .title .view-toggle {
+    height: 32px;
+    width: 32px;
+    border-radius: 16px;
+    border: 1px solid rgb(255, 255, 255, 0.2);
+    background: rgb(255, 255, 255, 0.1);
+    color: white;
+    
+    transition: 300ms ease-out;
+
+    display: none;
+}
+
+.preferences.expanded .title .view-toggle {
+    transform: rotateZ(180deg);
+}
+
+.preference-items {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.preference-items .disabled {
+    pointer-events: none;
+    opacity: 0.5;
+    user-select: none;
+    filter: saturate(0);
+}
+
+.preference-items .row-layout {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    flex: 1;
+}
+
+.preference-items .row-layout.justify-center {
+    justify-content: center;
+}
+
+.preference-items .row-layout.justify-space-between {
+    justify-content: space-between;
+}
+
+.preference-items .column-layout {
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.preference-items .padded {
+    padding: 5px;
+}
+
+.preference-items .top-spaced {
+    margin-top: 5px;
+}
+
+.preference-items .gap {
+    height: 50px;
+}
+
+.preference-items .shuffle-btn, .preference-items .arrange-btn {
+    height: 28px;
+    border-radius: 4px;
+}
+
+.preference-items .time-info {
+    font-size: 12px;
+}
+
+.preference-items .control-btn {
+    width: 100px;
+}
+
+.preference-items .control-btn.start {
+    height: 28px;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 900px) {
+    .preferences {
+        background: rgb(5, 5, 5, 0.85);
+        margin-right: 0;
+        width: unset;
+        border-radius: 20px;
+        
+        position: fixed;
+        bottom: -100px;
+        left: 0;
+        right: 0;
+        top: unset;
+    }
+    
+    .preferences .content {
+        width: 100%;
+        max-width: 560px;
+        margin-bottom: 100px;
+    }
+    
+    .preferences .title .view-toggle {
+        display: unset;
+    }
+
+    .preferences .preference-items {
+        display: none;
+    }
+
+    .preferences.expanded .preference-items {
+        display: flex;
+    }
+
+}
